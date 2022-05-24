@@ -1,0 +1,2789 @@
+THERE_BE_DRAGONS_HERE
+FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old stable)\PiezasAjedrez\A.png'
+10 November 2020 9:15:16.038999 am
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+File>>openForWrite:
+	Receiver: a File
+	Arguments and temporary variables: 
+		writeMode: 	false
+		fileHandle: 	nil
+	Receiver's instance variables: 
+		name: 	'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old stable)\Pie...etc...
+
+
+File>>openForRead
+	Receiver: a File
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old stable)\Pie...etc...
+
+
+File>>readStream
+	Receiver: a File
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		name: 	'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old stable)\Pie...etc...
+
+
+FileHandle>>binaryReadStream
+	Receiver: a FileHandle
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		reference: 	File @ C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old ...etc...
+		writable: 	false
+		id: 	nil
+
+
+FileSystem>>binaryReadStreamOn:
+	Receiver: a FileSystem
+	Arguments and temporary variables: 
+		aResolvable: 	Path * 'PiezasAjedrez' / 'A.png'
+	Receiver's instance variables: 
+		store: 	a WindowsStore
+
+
+FileReference>>binaryReadStream
+	Receiver: File @ PiezasAjedrez\A.png
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		filesystem: 	a FileSystem
+		path: 	Path * 'PiezasAjedrez' / 'A.png'
+
+
+FileReference(AbstractFileReference)>>binaryReadStreamDo:
+	Receiver: File @ PiezasAjedrez\A.png
+	Arguments and temporary variables: 
+		aBlock: 	[ :in | self fromBinaryStream: in ]
+		stream: 	nil
+	Receiver's instance variables: 
+		filesystem: 	a FileSystem
+		path: 	Path * 'PiezasAjedrez' / 'A.png'
+
+
+Form class>>fromFileNamed:
+	Receiver: Form
+	Arguments and temporary variables: 
+		fileName: 	'PiezasAjedrez\A.png'
+	Receiver's instance variables: 
+		superclass: 	DisplayMedium
+		methodDict: 	a MethodDictionary(size 201)
+		format: 	65541
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{ColorForm. Cursor. DisplayScreen. GlyphForm. AthensCairoSurfaceFor...etc...
+		name: 	#Form
+		classPool: 	a Dictionary(#FloodFillTolerance->nil )
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Graphics-Display Objects-Forms'
+
+
+Tablero>>bordes
+	Receiver: a Tablero(1010497792)
+	Arguments and temporary variables: 
+		imagen1: 	nil
+		imagen2: 	nil
+		imagen3: 	nil
+		imagen4: 	nil
+		imagen5: 	nil
+		imagen6: 	nil
+		imagen7: 	nil
+		imagen8: 	nil
+		imagen9: 	nil
+		imagen10: 	nil
+		imagen11: 	nil
+		imagen12: 	nil
+		imagen13: 	nil
+		imagen14: 	nil
+		imagen15: 	nil
+		imagen16: 	nil
+	Receiver's instance variables: 
+		bounds: 	(0.0@20.0) corner: (632.0@634.0)
+		owner: 	nil
+		submorphs: 	an Array(an Escaque(60431104) an Escaque(980078848) an Escaque(98938...etc...
+		fullBounds: 	(0.0@20.0) corner: (632.0@634.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (593253120)
+		borderWidth: 	1
+		borderColor: 	Color black
+		colEscaques: 	(an Escaque(42374912) an Escaque(304854272) an Escaque(867271936) ...etc...
+
+
+Tablero>>initialize
+	Receiver: a Tablero(1010497792)
+	Arguments and temporary variables: 
+		muestraEscaque: 	an Escaque(40286464)
+		ancho: 	70
+		alto: 	68
+		n: 	9
+	Receiver's instance variables: 
+		bounds: 	(0.0@20.0) corner: (632.0@634.0)
+		owner: 	nil
+		submorphs: 	an Array(an Escaque(60431104) an Escaque(980078848) an Escaque(98938...etc...
+		fullBounds: 	(0.0@20.0) corner: (632.0@634.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (593253120)
+		borderWidth: 	1
+		borderColor: 	Color black
+		colEscaques: 	(an Escaque(42374912) an Escaque(304854272) an Escaque(867271936) ...etc...
+
+
+Tablero class(Behavior)>>new
+	Receiver: Tablero
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	BorderedMorph
+		methodDict: 	a MethodDictionary(#bordes->Tablero>>#bordes #casillasOscuras->Tabl...etc...
+		format: 	65545
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	#()
+		name: 	#Tablero
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+		announcer: 	nil
+		cellsPerSide: 	nil
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	nil
+		colPiezasNegras: 	nil
+	Receiver's instance variables: 
+		tablero: 	nil
+		colJugadores: 	an OrderedCollection()
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ Partida new
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | text selection: result ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+	Receiver: a RubEditingArea(594142976)
+	Arguments and temporary variables: 
+		editBlock: 	[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+text...etc...
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (580@31)
+		owner: 	a TransformWithLayoutMorph(1039540992)
+		submorphs: 	an Array(a RubCursor(459034880) a RubPrimarySelectionMorph(164760320...etc...
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (1024040704) [other:  (announcer -> an Announcer) (...etc...
+		model: 	a GLMRubricSmalltalkTextModel
+		paragraph: 	a RubShoutStylerDecorator
+		editor: 	a RubSmalltalkEditor
+		scrollPane: 	a RubTextScrollPane(1027162880)
+		editingState: 	a RubEditingState
+		textStyle: 	a TextStyle Source Code Pro
+		textColor: 	Color white
+		margins: 	a Margin top: 6 left: 6 bottom: 6 right: 6
+		readOnly: 	false
+		menuAllowed: 	nil
+		editingMode: 	a RubSmalltalkScriptingMode
+		cursor: 	a RubCursor(459034880)
+		segments: 	an OrderedCollection(a RubHighlightSegmentMorph(44952832))
+		getMenuPolicy: 	nil
+		mouseDownPoint: 	(108.0@45.0)
+		wrapped: 	true
+		editorClass: 	RubSmalltalkEditor
+
+
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ textMorph textArea
+	handleEdit: [ textMorph textArea editor high...etc...
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	172693
+		lastStepMessage: 	nil
+		lastCycleTime: 	172714
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	172693
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1920@1017)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	(0@0) corner: (1920@1017)
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.705 g: 0.705 b: 0.705 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+		osWindow: 	nil
+		osWindowMutex: 	nil
+		session: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	172693
+		lastStepMessage: 	nil
+		lastCycleTime: 	172714
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	172693
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	172693
+		lastStepMessage: 	nil
+		lastCycleTime: 	172714
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	172693
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1920@1017)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	(0@0) corner: (1920@1017)
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) THERE_BE_DRAGONS_HERE
+Instance of FileDoesNotExistException did not understand #isBinary
+10 November 2020 9:15:23.273999 am
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+FileDoesNotExistException(Object)>>doesNotUnderstand: #isBinary
+	Receiver: FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old s...etc...
+	Arguments and temporary variables: 
+		aMessage: 	isBinary
+		exception: 	MessageNotUnderstood: FileDoesNotExistException>>isBinary
+		resumeValue: 	nil
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signaler: 	a File
+		signalContext: 	FileDoesNotExistException(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		fileName: 	'C:\Users\manul\Documents\Pharo\images\Pharo 7.0 - 64bit (old stable)...etc...
+		readOnly: 	true
+
+
+ZnBufferedReadStream>>collectionSpecies
+	Receiver: a ZnBufferedReadStream
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		stream: 	FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\Pharo...etc...
+		buffer: 	nil
+		position: 	1
+		limit: 	0
+
+
+ZnBufferedReadStream>>sizeBuffer:
+	Receiver: a ZnBufferedReadStream
+	Arguments and temporary variables: 
+		size: 	65536
+	Receiver's instance variables: 
+		stream: 	FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\Pharo...etc...
+		buffer: 	nil
+		position: 	1
+		limit: 	0
+
+
+ZnBufferedReadStream>>on:
+	Receiver: a ZnBufferedReadStream
+	Arguments and temporary variables: 
+		readStream: 	FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\P...etc...
+	Receiver's instance variables: 
+		stream: 	FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\Pharo...etc...
+		buffer: 	nil
+		position: 	1
+		limit: 	0
+
+
+ZnBufferedReadStream class>>on:
+	Receiver: ZnBufferedReadStream
+	Arguments and temporary variables: 
+		readStream: 	FileDoesNotExistException: 'C:\Users\manul\Documents\Pharo\images\P...etc...
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#atEnd->ZnBufferedReadStream>>#atEnd #close->ZnB...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#ZnBufferedReadStream
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Zinc-Character-Encoding-Core'
+
+
+FileReference>>binaryReadStream
+	Receiver: File @ PiezasAjedrez\A.png
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		filesystem: 	a FileSystem
+		path: 	Path * 'PiezasAjedrez' / 'A.png'
+
+
+FileReference(AbstractFileReference)>>binaryReadStreamDo:
+	Receiver: File @ PiezasAjedrez\A.png
+	Arguments and temporary variables: 
+		aBlock: 	[ :in | self fromBinaryStream: in ]
+		stream: 	nil
+	Receiver's instance variables: 
+		filesystem: 	a FileSystem
+		path: 	Path * 'PiezasAjedrez' / 'A.png'
+
+
+Form class>>fromFileNamed:
+	Receiver: Form
+	Arguments and temporary variables: 
+		fileName: 	'PiezasAjedrez\A.png'
+	Receiver's instance variables: 
+		superclass: 	DisplayMedium
+		methodDict: 	a MethodDictionary(size 201)
+		format: 	65541
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{ColorForm. Cursor. DisplayScreen. GlyphForm. AthensCairoSurfaceFor...etc...
+		name: 	#Form
+		classPool: 	a Dictionary(#FloodFillTolerance->nil )
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Graphics-Display Objects-Forms'
+
+
+Tablero>>bordes
+	Receiver: a Tablero(1010497792)
+	Arguments and temporary variables: 
+		imagen1: 	nil
+		imagen2: 	nil
+		imagen3: 	nil
+		imagen4: 	nil
+		imagen5: 	nil
+		imagen6: 	nil
+		imagen7: 	nil
+		imagen8: 	nil
+		imagen9: 	nil
+		imagen10: 	nil
+		imagen11: 	nil
+		imagen12: 	nil
+		imagen13: 	nil
+		imagen14: 	nil
+		imagen15: 	nil
+		imagen16: 	nil
+	Receiver's instance variables: 
+		bounds: 	(0.0@20.0) corner: (632.0@634.0)
+		owner: 	nil
+		submorphs: 	an Array(an Escaque(60431104) an Escaque(980078848) an Escaque(98938...etc...
+		fullBounds: 	(0.0@20.0) corner: (632.0@634.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (593253120)
+		borderWidth: 	1
+		borderColor: 	Color black
+		colEscaques: 	(an Escaque(42374912) an Escaque(304854272) an Escaque(867271936) ...etc...
+
+
+Tablero>>initialize
+	Receiver: a Tablero(1010497792)
+	Arguments and temporary variables: 
+		muestraEscaque: 	an Escaque(40286464)
+		ancho: 	70
+		alto: 	68
+		n: 	9
+	Receiver's instance variables: 
+		bounds: 	(0.0@20.0) corner: (632.0@634.0)
+		owner: 	nil
+		submorphs: 	an Array(an Escaque(60431104) an Escaque(980078848) an Escaque(98938...etc...
+		fullBounds: 	(0.0@20.0) corner: (632.0@634.0)
+		color: 	Color blue
+		extension: 	a MorphExtension (593253120)
+		borderWidth: 	1
+		borderColor: 	Color black
+		colEscaques: 	(an Escaque(42374912) an Escaque(304854272) an Escaque(867271936) ...etc...
+
+
+Tablero class(Behavior)>>new
+	Receiver: Tablero
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	BorderedMorph
+		methodDict: 	a MethodDictionary(#bordes->Tablero>>#bordes #casillasOscuras->Tabl...etc...
+		format: 	65545
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	#()
+		name: 	#Tablero
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+		announcer: 	nil
+		cellsPerSide: 	nil
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	nil
+		colPiezasNegras: 	nil
+	Receiver's instance variables: 
+		tablero: 	nil
+		colJugadores: 	an OrderedCollection()
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ Partida new
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | text selection: result ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+	Receiver: a RubEditingArea(594142976)
+	Arguments and temporary variables: 
+		editBlock: 	[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+text...etc...
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (580@31)
+		owner: 	a TransformWithLayoutMorph(1039540992)
+		submorphs: 	an Array(a RubCursor(459034880) a RubPrimarySelectionMorph(164760320...etc...
+		fullBounds: 	(0@0) corner: (580@31)
+		color: 	Color transparent
+		extension: 	a MorphExtension (1024040704) [other:  (announcer -> an Announcer) (...etc...
+		model: 	a GLMRubricSmalltalkTextModel
+		paragraph: 	a RubShoutStylerDecorator
+		editor: 	a RubSmalltalkEditor
+		scrollPane: 	a RubTextScrollPane(1027162880)
+		editingState: 	a RubEditingState
+		textStyle: 	a TextStyle Source Code Pro
+		textColor: 	Color white
+		margins: 	a Margin top: 6 left: 6 bottom: 6 right: 6
+		readOnly: 	false
+		menuAllowed: 	nil
+		editingMode: 	a RubSmalltalkScriptingMode
+		cursor: 	a RubCursor(459034880)
+		segments: 	an OrderedCollection(a RubHighlightSegmentMorph(44952832))
+		getMenuPolicy: 	nil
+		mouseDownPoint: 	(108.0@45.0)
+		wrapped: 	true
+		editorClass: 	RubSmalltalkEditor
+
+
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ textMorph textArea
+	handleEdit: [ textMorph textArea editor high...etc...
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	179923
+		lastStepMessage: 	nil
+		lastCycleTime: 	179965
+		alarms: 	a Heap()
+		lastAlarmTime: 	179923
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1920@1017)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.705 g: 0.705 b: 0.705 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+		osWindow: 	nil
+		osWindowMutex: 	nil
+		session: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	179923
+		lastStepMessage: 	nil
+		lastCycleTime: 	179965
+		alarms: 	a Heap()
+		lastAlarmTime: 	179923
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1920@1017)
+		canvas: 	a FormCanvas on: DisplayScreen(1920x1017x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	179923
+		lastStepMessage: 	nil
+		lastCycleTime: 	179965
+		alarms: 	a Heap()
+		lastAlarmTime: 	179923
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1920@1017)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.705 g: 0.705 b: 0.705 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+		osWindow: 	nil
+		osWindowMutex: 	nil
+		session: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(#acceptDroppingMorph:event:->WorldMorph>>#accept...etc...
+		format: 	65550
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{AthensWorldMorph. OSWindowWorldMorph}
+		name: 	#WorldMorph
+		classPool: 	a Dictionary(#AllowDropFiles->true #CursorOwnerWorld->a WorldMorph(7...etc...
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Morphic-Core-Worlds'
+		announcer: 	nil
+		displayScaleFactor: 	1
+
+
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		activeTranscript: 	nil
+
+
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	125
+		numArgs: 	0
+
+
+
+--- The full stack ---
+FileDoesNotExistException(Object)>>doesNotUnderstand: #isBinary
+ZnBufferedReadStream>>collectionSpecies
+ZnBufferedReadStream>>sizeBuffer:
+ZnBufferedReadStream>>on:
+ZnBufferedReadStream class>>on:
+FileReference>>binaryReadStream
+FileReference(AbstractFileReference)>>binaryReadStreamDo:
+Form class>>fromFileNamed:
+Tablero>>bordes
+Tablero>>initialize
+Tablero class(Behavior)>>new
+Partida>>initialize
+Partida class(Behavior)>>new
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+----------------------------------------------------------------------THERE_BE_DRAGONS_HERE
+Instance of Tablero class did not understand #bounds
+10 November 2020 1:11:48.390836 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+Tablero class(Object)>>doesNotUnderstand: #bounds
+	Receiver: Tablero
+	Arguments and temporary variables: 
+		aMessage: 	bounds
+		exception: 	MessageNotUnderstood: Tablero class>>bounds
+		resumeValue: 	nil
+	Receiver's instance variables: 
+		superclass: 	BorderedMorph
+		methodDict: 	a MethodDictionary(#bordes->Tablero>>#bordes #casillasOscuras->Tabl...etc...
+		format: 	65545
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	#()
+		name: 	#Tablero
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+		announcer: 	nil
+		cellsPerSide: 	nil
+
+
+Tablero class>>DoIt
+	Receiver: Tablero
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	BorderedMorph
+		methodDict: 	a MethodDictionary(#bordes->Tablero>>#bordes #casillasOscuras->Tabl...etc...
+		format: 	65545
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	#()
+		name: 	#Tablero
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+		announcer: 	nil
+		cellsPerSide: 	nil
+
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ self bounds
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	Tablero
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+ClyTextEditor(RubSmalltalkEditor)>>evaluate:andDo:
+	Receiver: a ClyTextEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadWriteStream
+		aBlock: 	[ :result | result inspect ]
+		result: 	nil
+		rcvr: 	Tablero
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	an IdentityDictionary(#command->#(#noop: #cursorHome: #...etc...
+		textArea: 	a RubEditingArea(1004170496)
+		selectorChooser: 	nil
+		notificationStrategy: 	a RubTextInsertionStrategy
+
+
+ClyTextEditor(RubSmalltalkEditor)>>evaluateSelectionAndDo:
+	Receiver: a ClyTextEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | result inspect ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	an IdentityDictionary(#command->#(#noop: #cursorHome: #...etc...
+		textArea: 	a RubEditingArea(1004170496)
+		selectorChooser: 	nil
+		notificationStrategy: 	a RubTextInsertionStrategy
+
+
+ClyTextEditor(RubSmalltalkEditor)>>inspectIt
+	Receiver: a ClyTextEditor
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	an IdentityDictionary(#command->#(#noop: #cursorHome: #...etc...
+		textArea: 	a RubEditingArea(1004170496)
+		selectorChooser: 	nil
+		notificationStrategy: 	a RubTextInsertionStrategy
+
+
+RubEditingArea(Object)>>perform:orSendTo:
+	Receiver: a RubEditingArea(1004170496)
+	Arguments and temporary variables: 
+		selector: 	#inspectIt
+		otherTarget: 	a ClyTextEditor
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (900@259)
+		owner: 	a TransformWithLayoutMorph(20074240)
+		submorphs: 	an Array(a RubCursor(317926400) a RubPrimarySelectionMorph(455581440...etc...
+		fullBounds: 	(0@0) corner: (900@259)
+		color: 	Color transparent
+		extension: 	a MorphExtension (1052319232) [other:  (announcer -> an Announcer) (...etc...
+		model: 	a RubScrolledTextModel
+		paragraph: 	a RubShoutStylerDecorator
+		editor: 	a ClyTextEditor
+		scrollPane: 	a RubTextScrollPane(236583680)
+		editingState: 	a RubEditingState
+		textStyle: 	a TextStyle Source Code Pro
+		textColor: 	Color white
+		margins: 	a Margin top: 6 left: 6 bottom: 6 right: 6
+		readOnly: 	false
+		menuAllowed: 	true
+		editingMode: 	a ClyTextEditingMode
+		cursor: 	a RubCursor(317926400)
+		segments: 	an OrderedCollection()
+		getMenuPolicy: 	a RubEditingArea(1004170496)
+		mouseDownPoint: 	nil
+		wrapped: 	true
+		editorClass: 	ClyTextEditor
+
+
+[ | selArgCount |
+"show cursor in case item opens a new MVC window"
+(selArgCount := selector numArgs) = 0
+	ifTrue: [ target perform: selector ]
+	ifFalse: [ selArgCount = arguments size
+			ifTrue: [ target perform: selector withArguments: arguments ]
+			ifFalse: [ target perform: selector withArguments: (arguments copyWith: evt) ] ].
+self showShortcut.
+self changed ] in ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		evt: 	[(171@648) mouseUp 73694015 nil]
+		w: 	a WorldMorph(703126016) [world]
+		selArgCount: 	2
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	(112.0@639.0) corner: (311.0@657.0)
+		color: 	Color white
+		extension: 	a MorphExtension (730706944)
+		font: 	a LogicalFont
+ familyName: 'Source Sans Pro'
+ emphasis: nil
+ pointSize: 1...etc...
+		emphasis: 	0
+		contents: 	'Inspect it'
+		hasFocus: 	false
+		backgroundColor: 	Color transparent
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a RubEditingArea(1004170496)
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a ClyTextEditor)
+		icon: 	Form(16x16x32)
+		keyText: 	'i'
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+
+
+BlockClosure>>ensure:
+	Receiver: [ | selArgCount |
+"show cursor in case item opens a new MVC window"
+(selArgCount := select...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[ oldcursor show ]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+		startpc: 	230
+		numArgs: 	0
+
+
+CursorWithMask(Cursor)>>showWhile:
+	Receiver: ((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0
+		2r100000000000000000000...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[ | selArgCount |
+"show cursor in case item opens a new MVC window"
+(se...etc...
+		oldcursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0
+		2...etc...
+	Receiver's instance variables: 
+		bits: 	a Bitmap of length 16
+		width: 	16
+		height: 	16
+		depth: 	1
+		offset: 	(-1@ -1)
+		maskForm: 	Form(16x16x1)
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>invokeWithEvent:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		evt: 	[(171@648) mouseUp 73694015 nil]
+		w: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	(112.0@639.0) corner: (311.0@657.0)
+		color: 	Color white
+		extension: 	a MorphExtension (730706944)
+		font: 	a LogicalFont
+ familyName: 'Source Sans Pro'
+ emphasis: nil
+ pointSize: 1...etc...
+		emphasis: 	0
+		contents: 	'Inspect it'
+		hasFocus: 	false
+		backgroundColor: 	Color transparent
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a RubEditingArea(1004170496)
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a ClyTextEditor)
+		icon: 	Form(16x16x32)
+		keyText: 	'i'
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>mouseUp:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		evt: 	[(171@648) mouseUp 73694015 nil]
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	(112.0@639.0) corner: (311.0@657.0)
+		color: 	Color white
+		extension: 	a MorphExtension (730706944)
+		font: 	a LogicalFont
+ familyName: 'Source Sans Pro'
+ emphasis: nil
+ pointSize: 1...etc...
+		emphasis: 	0
+		contents: 	'Inspect it'
+		hasFocus: 	false
+		backgroundColor: 	Color transparent
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a RubEditingArea(1004170496)
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a ClyTextEditor)
+		icon: 	Form(16x16x32)
+		keyText: 	'i'
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+
+
+ToggleMenuItemMorph(MenuItemMorph)>>handleMouseUp:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	(112.0@639.0) corner: (311.0@657.0)
+		color: 	Color white
+		extension: 	a MorphExtension (730706944)
+		font: 	a LogicalFont
+ familyName: 'Source Sans Pro'
+ emphasis: nil
+ pointSize: 1...etc...
+		emphasis: 	0
+		contents: 	'Inspect it'
+		hasFocus: 	false
+		backgroundColor: 	Color transparent
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a RubEditingArea(1004170496)
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a ClyTextEditor)
+		icon: 	Form(16x16x32)
+		keyText: 	'i'
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(171@648) mouseUp 73694015 nil]
+	Arguments and temporary variables: 
+		anObject: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+	Receiver's instance variables: 
+		timeStamp: 	73694015
+		source: 	a HandMorph(473969920)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(171@648)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+ToggleMenuItemMorph(Morph)>>handleEvent:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	(112.0@639.0) corner: (311.0@657.0)
+		color: 	Color white
+		extension: 	a MorphExtension (730706944)
+		font: 	a LogicalFont
+ familyName: 'Source Sans Pro'
+ emphasis: nil
+ pointSize: 1...etc...
+		emphasis: 	0
+		contents: 	'Inspect it'
+		hasFocus: 	false
+		backgroundColor: 	Color transparent
+		isEnabled: 	true
+		subMenu: 	nil
+		isSelected: 	false
+		target: 	a RubEditingArea(1004170496)
+		selector: 	#perform:orSendTo:
+		arguments: 	an Array(#inspectIt a ClyTextEditor)
+		icon: 	Form(16x16x32)
+		keyText: 	'i'
+		getStateSelector: 	nil
+		enablementSelector: 	nil
+
+
+MorphicEventDispatcher>>dispatchDefault:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+		aMorph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+		localEvt: 	nil
+		index: 	1
+		child: 	nil
+		morphs: 	#()
+		inside: 	true
+	Receiver's instance variables: 
+		morph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+
+
+MorphicEventDispatcher>>handleMouseUp:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+	Receiver's instance variables: 
+		morph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [(171@648) mouseUp 73694015 nil]
+	Arguments and temporary variables: 
+		anObject: 	a MorphicEventDispatcher
+	Receiver's instance variables: 
+		timeStamp: 	73694015
+		source: 	a HandMorph(473969920)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	(171@648)
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+[ ^ anEvent sentTo: self ] in MorphicEventDispatcher>>dispatchEvent:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+		aMorph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+	Receiver's instance variables: 
+		morph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+
+
+BlockClosure>>ensure:
+	Receiver: [ ^ anEvent sentTo: self ]
+	Arguments and temporary variables: 
+		aBlock: 	[ morph := nil ]
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	MorphicEventDispatcher>>dispatchEvent:with:
+		startpc: 	48
+		numArgs: 	0
+
+
+MorphicEventDispatcher>>dispatchEvent:with:
+	Receiver: a MorphicEventDispatcher
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+		aMorph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+	Receiver's instance variables: 
+		morph: 	a ToggleMenuItemMorph(871418112)'Inspect it'
+
+
+ToggleMenuItemMorph(Morph)>>processEvent:using:
+	Receiver: a ToggleMenuItemMorph(871418112)'Inspect it'
+	Arguments and temporary variables: 
+		anEvent: 	[(171@648) mouseUp 73694015 nil]
+		defaultDispatcher: 	a MorphicEventDispatcher
+	Receiver's instance variables: 
+		bounds: 	(112.0@639.0) corner: (311.0@657.0)
+		owner: 	a MenuMorph(250381824)
+		submorphs: 	#()
+		fullBounds: 	THERE_BE_DRAGONS_HERE
+#adaptToNumber:andSend: was sent to nil
+11 November 2020 1:20:37.972869 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+UndefinedObject(Object)>>doesNotUnderstand: #adaptToNumber:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		aMessage: 	adaptToNumber: 1 andSend: #'>='
+		exception: 	MessageNotUnderstood: receiver of "adaptToNumber:andSend:" is nil
+		resumeValue: 	nil
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andCompare:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+SmallInteger(Integer)>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+SmallInteger>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Resivo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se resive nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(843394048)
+		reyBlanco: 	a Rey(1017937408)
+		rendicion: 	true
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(666887680)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	'a Jugador'
+		movimientosMax: 	nil
+
+
+BlockClosure>>whileNil:
+	Receiver: [ ganador ]
+	Arguments and temporary variables: 
+		aBlock: 	[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tabl...etc...
+	Receiver's instance variables: 
+		outerContext: 	Partida>>menuEmpezarJuego
+		startpc: 	405
+		numArgs: 	0
+
+
+Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(843394048)
+		reyBlanco: 	a Rey(1017937408)
+		rendicion: 	true
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(666887680)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	'a Jugador'
+		movimientosMax: 	nil
+
+
+Partida>>menuDeJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menuInicio: 	1
+	Receiver's instance variables: 
+		tablero: 	a Tablero(666887680)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	'a Jugador'
+		movimientosMax: 	nil
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	an OrderedCollection(a Peon(1071242240) a Peon(431444480) a P...etc...
+		colPiezasNegras: 	an OrderedCollection(a Peon(1015980032) a Peon(644443136) a Pe...etc...
+	Receiver's instance variables: 
+		tablero: 	a Tablero(666887680)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	'a Jugador'
+		movimientosMax: 	nil
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ Partida new
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+THERE_BE_DRAGONS_HERE
+SubscriptOutOfBounds: 0
+11 November 2020 1:28:15.286869 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+OrderedCollection(Object)>>errorSubscriptBounds:
+	Receiver: an OrderedCollection(an Escaque(540651008))
+	Arguments and temporary variables: 
+		index: 	0
+	Receiver's instance variables: 
+		array: 	an Array(an Escaque(540651008) nil nil nil nil nil nil nil nil nil)
+		firstIndex: 	1
+		lastIndex: 	1
+
+
+OrderedCollection>>at:
+	Receiver: an OrderedCollection(an Escaque(540651008))
+	Arguments and temporary variables: 
+		anInteger: 	0
+		index: 	nil
+	Receiver's instance variables: 
+		array: 	an Array(an Escaque(540651008) nil nil nil nil nil nil nil nil nil)
+		firstIndex: 	1
+		lastIndex: 	1
+
+
+Jugador>>menuJugadorElijeMovimiento:
+	Receiver: a Jugador
+	Arguments and temporary variables: 
+		unaColPosiblesMovimientos: 	an OrderedCollection(an Escaque(540651008))
+		menu: 	0
+		colPosMoviStrings: 	an OrderedCollection('3A')
+		escaqueSelecMov: 	nil
+	Receiver's instance variables: 
+		color: 	'Blanco'
+		colPiezas: 	an OrderedCollection(a Peon(192077312) a Peon(578148864) a Peon(6598...etc...
+		tablero: 	a Tablero(816600064)
+		rendicion: 	false
+		tablas: 	false
+
+
+Jugador>>menuPidePiezaJugador:
+	Receiver: a Jugador
+	Arguments and temporary variables: 
+		filaSelec: 	2
+		error: 	false
+		columnaSelec: 	1
+		numeroJugador: 	1
+		escaqueSelec: 	an Escaque(546668032)
+		piezaSelec: 	a Peon(192077312)
+		posiblesMovimientos: 	an OrderedCollection(an Escaque(540651008))
+		escaqueSelecParaMov: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		color: 	'Blanco'
+		colPiezas: 	an OrderedCollection(a Peon(192077312) a Peon(578148864) a Peon(6598...etc...
+		tablero: 	a Tablero(816600064)
+		rendicion: 	false
+		tablas: 	false
+
+
+Jugador>>menuOpcionesJugador:
+	Receiver: a Jugador
+	Arguments and temporary variables: 
+		numeroJugador: 	1
+		menu: 	1
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		color: 	'Blanco'
+		colPiezas: 	an OrderedCollection(a Peon(192077312) a Peon(578148864) a Peon(6598...etc...
+		tablero: 	a Tablero(816600064)
+		rendicion: 	false
+		tablas: 	false
+
+
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Resivo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se resive nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(384755712)
+		reyBlanco: 	a Rey(518676480)
+		rendicion: 	false
+		turnoJugadorNum: 	1
+		jugadorFueraTurnoNum: 	2
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	12
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	true
+		colPiezasJugadorEnTurno: 	an OrderedCollection(a Peon(761085440) a Peon(79329792...etc...
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(816600064)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	500
+
+
+BlockClosure>>whileNil:
+	Receiver: [ ganador ]
+	Arguments and temporary variables: 
+		aBlock: 	[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tabl...etc...
+	Receiver's instance variables: 
+		outerContext: 	Partida>>menuEmpezarJuego
+		startpc: 	405
+		numArgs: 	0
+
+
+Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(384755712)
+		reyBlanco: 	a Rey(518676480)
+		rendicion: 	false
+		turnoJugadorNum: 	1
+		jugadorFueraTurnoNum: 	2
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	12
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	true
+		colPiezasJugadorEnTurno: 	an OrderedCollection(a Peon(761085440) a Peon(79329792...etc...
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(816600064)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	500
+
+
+Partida>>menuDeJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menuInicio: 	1
+	Receiver's instance variables: 
+		tablero: 	a Tablero(816600064)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	500
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	an OrderedCollection(a Peon(192077312) a Peon(578148864) a Pe...etc...
+		colPiezasNegras: 	an OrderedCollection(a Peon(761085440) a Peon(79329792) a Peon...etc...
+	Receiver's instance variables: 
+		tablero: 	a Tablero(816600064)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	500
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ Partida new
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | text selection: result ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRendereTHERE_BE_DRAGONS_HERE
+#adaptToNumber:andSend: was sent to nil
+11 November 2020 1:29:04.343869 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+UndefinedObject(Object)>>doesNotUnderstand: #adaptToNumber:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		aMessage: 	adaptToNumber: 1 andSend: #'>='
+		exception: 	MessageNotUnderstood: receiver of "adaptToNumber:andSend:" is nil
+		resumeValue: 	nil
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andCompare:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+SmallInteger(Integer)>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+SmallInteger>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Resivo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se resive nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(1071882240)
+		reyBlanco: 	a Rey(960915456)
+		rendicion: 	false
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(936669184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+BlockClosure>>whileNil:
+	Receiver: [ ganador ]
+	Arguments and temporary variables: 
+		aBlock: 	[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tabl...etc...
+	Receiver's instance variables: 
+		outerContext: 	Partida>>menuEmpezarJuego
+		startpc: 	405
+		numArgs: 	0
+
+
+Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(1071882240)
+		reyBlanco: 	a Rey(960915456)
+		rendicion: 	false
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(936669184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida>>menuDeJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menuInicio: 	1
+	Receiver's instance variables: 
+		tablero: 	a Tablero(936669184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	an OrderedCollection(a Peon(1030649344) a Peon(523108864) a P...etc...
+		colPiezasNegras: 	an OrderedCollection(a Peon(94235648) a Peon(52034560) a Peon(...etc...
+	Receiver's instance variables: 
+		tablero: 	a Tablero(936669184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	^ Partida new
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | text selection: result ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	nil
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+	Receiver: a RubEditingArea(594142976)
+	Arguments and temporary variables: 
+		editBlock: 	[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+text...etc...
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (285@31)
+		owner: 	a TransformWithLayoutMorph(1039540992)
+		submorphs: 	an Array(a RubCursor(459034880) a RubPrimarySelectionMorph(164760320...etc...
+		fullBounds: 	(0@0) corner: (285@31)
+		color: 	Color transparent
+		extension: 	a MorphExtension (1024040704) [other:  (announcer -> an Announcer) (...etc...
+		model: 	a GLMRubricSmalltalkTextModel
+		paragraph: 	a RubShoutStylerDecorator
+		editor: 	a RubSmalltalkEditor
+		scrollPane: 	a RubTextScrollPane(1027162880)
+		editingState: 	a RubEditingState
+		textStyle: 	a TextStyle Source Code Pro
+		textColor: 	Color white
+		margins: 	a Margin top: 6 left: 6 bottom: 6 right: 6
+		readOnly: 	false
+		menuAllowed: 	nil
+		editingMode: 	a RubSmalltalkScriptingMode
+		cursor: 	a RubCursor(459034880)
+		segments: 	an OrderedCollection(a RubHighlightSegmentMorph(94217216))
+		getMenuPolicy: 	nil
+		mouseDownPoint: 	(129@105)
+		wrapped: 	true
+		editorClass: 	RubSmalltalkEditor
+
+
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorldTHERE_BE_DRAGONS_HERE
+#adaptToNumber:andSend: was sent to nil
+25 November 2020 5:47:39.023828 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+UndefinedObject(Object)>>doesNotUnderstand: #adaptToNumber:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		aMessage: 	adaptToNumber: 1 andSend: #'>='
+		exception: 	MessageNotUnderstood: receiver of "adaptToNumber:andSend:" is nil
+		resumeValue: 	nil
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andSend:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+UndefinedObject(Object)>>adaptToInteger:andCompare:
+	Receiver: nil
+	Arguments and temporary variables: 
+		rcvr: 	1
+		selector: 	#'>='
+	Receiver's instance variables: 
+nil
+
+SmallInteger(Integer)>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+SmallInteger>>>=
+	Receiver: 1
+	Arguments and temporary variables: 
+		aNumber: 	nil
+	Receiver's instance variables: 
+1
+
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Recibo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se recibe nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(918307584)
+		reyBlanco: 	a Rey(30854912)
+		rendicion: 	false
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(1036829184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+BlockClosure>>whileNil:
+	Receiver: [ ganador ]
+	Arguments and temporary variables: 
+		aBlock: 	[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tabl...etc...
+	Receiver's instance variables: 
+		outerContext: 	Partida>>menuEmpezarJuego
+		startpc: 	405
+		numArgs: 	0
+
+
+Partida>>menuEmpezarJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menu: 	1
+		reyNegro: 	a Rey(918307584)
+		reyBlanco: 	a Rey(30854912)
+		rendicion: 	false
+		turnoJugadorNum: 	2
+		jugadorFueraTurnoNum: 	1
+		jugadorFueraTurno: 	a Jugador
+		jugadorEnTurno: 	a Jugador
+		cantMovimientos: 	1
+		tablasRechazadas: 	true
+		empate: 	nil
+		posiblesTablas: 	false
+		noSaltar: 	false
+		colPiezasJugadorEnTurno: 	nil
+		piezaComida: 	nil
+	Receiver's instance variables: 
+		tablero: 	a Tablero(1036829184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida>>menuDeJuego
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		menuInicio: 	1
+	Receiver's instance variables: 
+		tablero: 	a Tablero(1036829184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida>>initialize
+	Receiver: a Partida
+	Arguments and temporary variables: 
+		colPiezasBlancas: 	an OrderedCollection(a Peon(1038821376) a Peon(429076992) a P...etc...
+		colPiezasNegras: 	an OrderedCollection(a Peon(248796928) a Peon(379575040) a Peo...etc...
+	Receiver's instance variables: 
+		tablero: 	a Tablero(1036829184)
+		colJugadores: 	an OrderedCollection(a Jugador a Jugador)
+		ganador: 	nil
+		movimientosMax: 	nil
+
+
+Partida class(Behavior)>>new
+	Receiver: Partida
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#crearJugadorBlancas:->Partida>>#crearJugadorBla...etc...
+		format: 	65540
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	nil
+		name: 	#Partida
+		classPool: 	a Dictionary()
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'POO Tp obligatorio libre Ajedrez'
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variabTHERE_BE_DRAGONS_HERE
+Instance of Pieza did not understand #diagonal
+18 February 2021 3:12:42.53817 pm
+
+VM: Win32 - X64 - 6.2 - CoInterpreter VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+StackToRegisterMappingCogit VMMaker.oscog-eem.2509 uuid: 91e81f64-95de-4914-a960-8f842be3a194 Sep 13 2019
+VM: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm Date: Wed Jul 3 16:41:39 2019 CommitHash: 4e4c5b5a0 Plugins: 201907031441-pharo Guille@DESKTOP-MG6660L:projects/vm7/opensmalltalk-vm
+
+Image: Pharo7.0.5 [Build information: Pharo-7.0.5+build.177.sha.fd8c156d959653f52be6fd7f8c71edf8cfb8fe90 (64 Bit)]
+
+Pieza(Object)>>doesNotUnderstand: #diagonal
+	Receiver: a Pieza(171835392)
+	Arguments and temporary variables: 
+		aMessage: 	diagonal
+		exception: 	MessageNotUnderstood: Pieza>>diagonal
+		resumeValue: 	nil
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1@1)
+		owner: 	nil
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color blue
+		extension: 	nil
+		image: 	Form(1x1x1)
+		filaPieza: 	nil
+		columnaPieza: 	nil
+		colPosiblesMovimientos: 	an OrderedCollection()
+
+
+UndefinedObject>>DoIt
+	Receiver: nil
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+nil
+
+OpalCompiler>>evaluate
+	Receiver: an OpalCompiler
+	Arguments and temporary variables: 
+		value: 	nil
+	Receiver's instance variables: 
+		ast: 	DoIt
+	a := Pieza new.
+	^ Transcript show: a diagonal
+		source: 	a ReadStream
+		context: 	nil
+		receiver: 	nil
+		compilationContext: 	a CompilationContext
+		compilationContextClass: 	nil
+
+
+RubSmalltalkEditor>>evaluate:andDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aStream: 	a ReadStream
+		aBlock: 	[ :result | aBlock value: result ]
+		result: 	nil
+		rcvr: 	nil
+		ctxt: 	nil
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	an IdentityDictionary(#command->#(#noop: #cursorHome: #...etc...
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+	Receiver: a RubSmalltalkEditor
+	Arguments and temporary variables: 
+		aBlock: 	[ :result | text selection: result ]
+	Receiver's instance variables: 
+		defaultKeymappingIndex: 	an IdentityDictionary(#command->#(#noop: #cursorHome: #...etc...
+		textArea: 	a RubEditingArea(594142976)
+		selectorChooser: 	nil
+		notificationStrategy: 	a GLMPopperNotificationStrategy
+
+
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+	Receiver: a RubEditingArea(594142976)
+	Arguments and temporary variables: 
+		editBlock: 	[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+text...etc...
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (351@50)
+		owner: 	a TransformWithLayoutMorph(1039540992)
+		submorphs: 	an Array(a RubPrimarySelectionMorph(547275776) a RubCursor(459034880...etc...
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (1024040704) [other:  (announcer -> an Announcer) (...etc...
+		model: 	a GLMRubricSmalltalkTextModel
+		paragraph: 	a RubShoutStylerDecorator
+		editor: 	a RubSmalltalkEditor
+		scrollPane: 	a RubTextScrollPane(1027162880)
+		editingState: 	a RubEditingState
+		textStyle: 	a TextStyle Source Code Pro
+		textColor: 	Color white
+		margins: 	a Margin top: 6 left: 6 bottom: 6 right: 6
+		readOnly: 	false
+		menuAllowed: 	nil
+		editingMode: 	a RubSmalltalkScriptingMode
+		cursor: 	a RubCursor(459034880)
+		segments: 	an OrderedCollection(a RubHighlightSegmentMorph(49254400))
+		getMenuPolicy: 	nil
+		mouseDownPoint: 	nil
+		wrapped: 	true
+		editorClass: 	RubSmalltalkEditor
+
+
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+	Receiver: a GLMMorphicPharoScriptRenderer
+	Arguments and temporary variables: 
+		ann: 	a GLMHighlightAndEvaluate
+	Receiver's instance variables: 
+		renderer: 	a GLMMorphicRenderer
+		textMorph: 	a RubScrolledTextMorph(134756096)
+		textModel: 	a GLMRubricSmalltalkTextModel
+
+
+WorldState>>runStepMethodsIn:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+		queue: 	WaitfreeQueue with 0 items
+		nextInQueue: 	[ textMorph textArea
+	handleEdit: [ textMorph textArea editor high...etc...
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1904@1001)
+		canvas: 	a FormCanvas on: DisplayScreen(1904x1001x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	320852
+		lastStepMessage: 	nil
+		lastCycleTime: 	320900
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	320852
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>runStepMethods
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1904@1001)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	(0@0) corner: (1904@1001)
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.705 g: 0.705 b: 0.705 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+		osWindow: 	nil
+		osWindowMutex: 	nil
+		session: 	nil
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1904@1001)
+		canvas: 	a FormCanvas on: DisplayScreen(1904x1001x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	320852
+		lastStepMessage: 	nil
+		lastCycleTime: 	320900
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	320852
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a WorldMorph(703126016) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(473969920))
+		viewBox: 	(0@0) corner: (1904@1001)
+		canvas: 	a FormCanvas on: DisplayScreen(1904x1001x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> a GLMSystemWindow(137755904) named: Pl...etc...
+		lastStepTime: 	320852
+		lastStepMessage: 	nil
+		lastCycleTime: 	320900
+		alarms: 	a Heap(MorphicAlarm(#hideShow -> a RubCursor(459034880)))
+		lastAlarmTime: 	320852
+		menuBuilder: 	a PragmaMenuBuilder ( nil ) 
+		activeHand: 	a HandMorph(473969920)
+		currentCursor: 	((CursorWithMask
+	extent: (16@16)
+	depth: 1
+	fromArray: #(
+		2r0...etc...
+
+
+WorldMorph>>doOneCycle
+	Receiver: a WorldMorph(703126016) [world]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	(0@0) corner: (1904@1001)
+		owner: 	nil
+		submorphs: 	an Array(a MenubarMorph(769431040) a TaskbarMorph(471723264) a GLMSy...etc...
+		fullBounds: 	(0@0) corner: (1904@1001)
+		color: 	(Color r: 0.295 g: 0.295 b: 0.295 alpha: 1.0)
+		extension: 	a MorphExtension (930026240) [other:  (dragEnabled -> true) (dropEna...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.705 g: 0.705 b: 0.705 alpha: 1.0)
+		backgroundMorph: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+		osWindow: 	nil
+		osWindowMutex: 	nil
+		session: 	nil
+
+
+WorldMorph class>>doOneCycle
+	Receiver: WorldMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	PasteUpMorph
+		methodDict: 	a MethodDictionary(#acceptDroppingMorph:event:->WorldMorph>>#accept...etc...
+		format: 	65550
+		layout: 	a FixedLayout
+		organization: 	a ClassOrganization
+		subclasses: 	{AthensWorldMorph. OSWindowWorldMorph}
+		name: 	#WorldMorph
+		classPool: 	a Dictionary(#AllowDropFiles->true #CursorOwnerWorld->a WorldMorph(7...etc...
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemDictionary(lots of globals)
+		category: 	#'Morphic-Core-Worlds'
+		announcer: 	nil
+		displayScaleFactor: 	1
+
+
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+	Receiver: a MorphicUIManager
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		activeTranscript: 	Transcript
+
+
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+	Receiver: [ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ]
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		outerContext: 	MorphicUIManager>>spawnNewProcess
+		startpc: 	125
+		numArgs: 	0
+
+
+
+--- The full stack ---
+Pieza(Object)>>doesNotUnderstand: #diagonal
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate:
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess
+-------------------------------------------------------------------------------
+

@@ -1,0 +1,309 @@
+[31mInstance of Pieza did not understand #diagonal
+[0mPieza(Object)>>doesNotUnderstand: #diagonal
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea editor highlightEvaluateAndDo...etc...
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0muso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego in Block: [ "Mientras no termine el juego por empate, rendic...etc...
+BlockClosure>>whileNil:
+Partida>>menuEmpezarJuego
+Partida>>menuDeJuego
+Partida>>initialize
+Partida class(Behavior)>>new
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea editor highlightEvaluateAndDo...etc...
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0m[31mSubscriptOutOfBounds: 0
+[0mOrderedCollection(Object)>>errorSubscriptBounds:
+OrderedCollection>>at:
+Jugador>>menuJugadorElijeMovimiento:
+Jugador>>menuPidePiezaJugador:
+Jugador>>menuOpcionesJugador:
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Resivo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se resive nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego in Block: [ "Mientras no termine el juego por empate, rendic...etc...
+BlockClosure>>whileNil:
+Partida>>menuEmpezarJuego
+Partida>>menuDeJuego
+Partida>>initialize
+Partida class(Behavior)>>new
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea editor highlightEvaluateAndDo...etc...
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0m[31m#adaptToNumber:andSend: was sent to nil
+[0mUndefinedObject(Object)>>doesNotUnderstand: #adaptToNumber:andSend:
+UndefinedObject(Object)>>adaptToInteger:andSend:
+UndefinedObject(Object)>>adaptToInteger:andCompare:
+SmallInteger(Integer)>>>=
+SmallInteger>>>=
+[ "Mientras no termine el juego por empate, rendicion o jake mate"
+tablasRechazadas := true.
+piezaComida := jugadorEnTurno menuOpcionesJugador: turnoJugadorNum.	"Envio numero de jugador en turno para indicarlo en el menu. Resivo si se comio una pieza (y cual) para poder quitarla de la coleccion de piezas del otro jugador si no se comio ninguna se resive nil"
+piezaComida = reyBlanco | (piezaComida = reyNegro)
+	ifTrue: [ ganador := 'Jugador: ' , turnoJugadorNum asString.
+		UIManager default
+			alert: 'Ganador: ' , ganador
+			title: 'UN REY A SIDO TOMADO' ].
+
+"Victoria jugador"
+
+"ELIMINO PIEZA COMIDA POR EL JUGADOR ANTERIOR DE LA COLECCION DEL JUGADOR EN TURNO ACTUAL"
+ganador
+	ifNil:
+		[ "Si no se comio al rey elimino la pieza de la coleccion caso contrario salteo"
+		piezaComida
+			ifNotNil: [ colPiezasJugadorEnTurno := jugadorFueraTurno getColPiezas.
+				colPiezasJugadorEnTurno remove: piezaComida ] ].
+
+"UN JUGADOR SE RINDE (1)"
+rendicion := jugadorEnTurno getRendicion.	"Verifica si el jugador elijio rendirce"
+
+"SE PROPONEN TABLAS"
+posiblesTablas := jugadorEnTurno getTablas.	"Verifica si el jugador prouso tablas"
+posiblesTablas
+	ifTrue:
+		[ empate := jugadorFueraTurno menuTablas: jugadorFueraTurnoNum.	"Pregunto al otro jugador si quiere aceptar las tablas"
+		empate
+			ifTrue: [ ganador := 'EMPATE'.
+				UIManager default
+					alert: 'La partida se resolvio en tablas'
+					title: 'FIN DEL JUEGO' ].	"Si acepta indico que termino el juego"
+		empate
+			ifFalse: [ posiblesTablas := false.
+				UIManager default
+					alert: 'El adversario rechazo la propuesta de tablas elija una opcion'
+					title: 'Jugador ' , turnoJugadorNum asString.
+				tablasRechazadas := false.
+				jugadorEnTurno setTablas: false	"seteo nuevamente en false la variable tablas del jugador que propuso (Se modificaba en menuOpcionesJugador a true cuando ofrecia tablas)" ]	"Si el otro jugador lo rechaza le indico al jugador que rechazaron la propuesta y seteo tablasrechazadas en true para que no se produzca un cambio de turno y que el jugador que propuso no pierda su turno y elija una opcion nuevamente" ].
+
+"UN JUGADOR TERMINA SU TURNO Y PASA AL SIGUIENTE JUGADOR"
+tablasRechazadas & ganador isNil
+	ifTrue:
+		[ "Si se rechazaron tablas esto hace que el jugador que las propuso no pierda su turno"
+		noSaltar := true.
+		turnoJugadorNum = 1
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 2.
+				noSaltar := false	"Lo utilizo para indicar que ya se hizo un cambio" ].	"Intercambio los turnos"
+		turnoJugadorNum = 2 & noSaltar
+			ifTrue: [ jugadorFueraTurnoNum := turnoJugadorNum.
+				turnoJugadorNum := 1 ].
+		jugadorEnTurno := colJugadores at: turnoJugadorNum.	"jugador1: piezas blancas jugador2 piezas negras."
+		jugadorFueraTurno := colJugadores at: jugadorFueraTurnoNum ].
+
+"UN JUGADOR SE RINDE (2)"
+rendicion
+	ifTrue: [ ganador := jugadorEnTurno asString.
+		UIManager default
+			alert: 'Ganador: Jugador' , turnoJugadorNum asString
+			title: 'UN JUGADOR SE A RENDIDO' ].
+
+"SUMO MOVIMIENTO Y VERIFICO SI SE EXEDIO PARA TERMINAR EL JUEGO EN TABLAS"
+cantMovimientos := cantMovimientos + 1.
+cantMovimientos >= movimientosMax
+	ifTrue: [ ganador := 'EMPATE'.
+		UIManager default
+			alert:
+				'La partida se resolvio en tablas por que se realizo la cantidad de movimientos preestablecida por los jugadores'
+			title: 'FIN DEL JUEGO' ] ] in Partida>>menuEmpezarJuego in Block: [ "Mientras no termine el juego por empate, rendic...etc...
+BlockClosure>>whileNil:
+Partida>>menuEmpezarJuego
+Partida>>menuDeJuego
+Partida>>initialize
+Partida class(Behavior)>>new
+UndefinedObject>>DoIt
+OpalCompiler>>evaluate
+RubSmalltalkEditor>>evaluate:andDo:
+RubSmalltalkEditor>>highlightEvaluateAndDo:
+[ textMorph textArea editor highlightEvaluateAndDo: ann action.
+textMorph shoutStyler style: textMorph text ] in [ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea editor highlightEvaluateAndDo...etc...
+RubEditingArea(RubAbstractTextArea)>>handleEdit:
+[ textMorph textArea
+	handleEdit: [ textMorph textArea editor highlightEvaluateAndDo: ann action.
+		textMorph shoutStyler style: textMorph text ] ] in GLMMorphicPharoScriptRenderer(GLMMorphicPharoCodeRenderer)>>actOnHighlightAndEvaluate: in Block: [ textMorph textArea...
+WorldState>>runStepMethodsIn:
+WorldMorph>>runStepMethods
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+WorldMorph>>doOneCycle
+WorldMorph class>>doOneCycle
+[ [ WorldMorph doOneCycle.
+Processor yield.
+false ] whileFalse: [  ] ] in MorphicUIManager>>spawnNewProcess in Block: [ [ WorldMorph doOneCycle....
+[ self value.
+Processor terminateActive ] in BlockClosure>>newProcess in Block: [ self value....
+[0m
